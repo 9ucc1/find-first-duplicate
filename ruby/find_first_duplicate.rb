@@ -1,5 +1,11 @@
 def find_first_duplicate(arr)
   # type your code in here
+  uniq_num = []
+  arr.each do |num|
+    return num if uniq_num.include?(num)
+    uniq_num << num
+  end
+  -1
 end
 
 if __FILE__ == $PROGRAM_NAME
